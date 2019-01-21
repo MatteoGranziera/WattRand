@@ -1,9 +1,0 @@
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\bin\Release\WattRand.BusinessLogic.dll
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\bin\Release\WattRand.BusinessLogic.pdb
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\bin\Release\ClosedXML.dll
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\bin\Release\DocumentFormat.OpenXml.dll
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\bin\Release\DocX.dll
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\bin\Release\ClosedXML.xml
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\obj\Release\WattRand.BusinessLogic.csprojResolveAssemblyReference.cache
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\obj\Release\WattRand.BusinessLogic.dll
-C:\Users\Tomoki\documents\visual studio 2015\Projects\WattRand\WattRand.BusinessLogic\obj\Release\WattRand.BusinessLogic.pdb
