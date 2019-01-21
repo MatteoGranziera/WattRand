@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/WattRand/bin
+/WattRand/obj
+/WattRand.BusinessLogic/bin
+/WattRand.BusinessLogic/obj
