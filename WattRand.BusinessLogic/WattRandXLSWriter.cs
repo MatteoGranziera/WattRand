@@ -75,26 +75,26 @@ namespace WattRand.BusinessLogic
 
         private void AddHeaderMonth(IXLCell startCell, string monthName)
         {
-            startCell.DataType = XLCellValues.Text;
+            startCell.DataType = XLDataType.Text;
             startCell.Value = monthName;
 
-            startCell.CellRight().DataType = XLCellValues.Text;
+            startCell.CellRight().DataType = XLDataType.Text;
             startCell.CellRight().Value = INVALUE_HEADER;
 
-            startCell.CellRight().CellRight().DataType = XLCellValues.Text;
+            startCell.CellRight().CellRight().DataType = XLDataType.Text;
             startCell.CellRight().CellRight().Value = INVALUE_HEADER;
         }
         private void WriteRow(IXLCell startCell, int row, double inValue, double outValue)
         {
-            startCell.DataType = XLCellValues.Text;
+            startCell.DataType = XLDataType.Text;
             startCell.Value = row;
 
-            startCell.CellRight().DataType = XLCellValues.Text;
+            startCell.CellRight().DataType = XLDataType.Text;
             if(inValue>0)
                 startCell.CellRight().Value = inValue.ToString("0");
 
 
-            startCell.CellRight().CellRight().DataType = XLCellValues.Text;
+            startCell.CellRight().CellRight().DataType = XLDataType.Text;
             if (outValue > 0)
                 startCell.CellRight().CellRight().Value = outValue.ToString("0");
         }

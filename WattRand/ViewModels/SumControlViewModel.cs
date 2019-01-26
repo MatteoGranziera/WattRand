@@ -22,7 +22,7 @@ namespace WattRand.ViewModels
         {
             ConfirmCommand = new RelayCommand<Object>(ConfirmCommandExecute);
             DateSelected = date;
-            IsInValue = IsInValue;
+            IsInValue = inValue;
             _valueOne = 0;
             _valueTwo = 0;
             _valueThree = 0;

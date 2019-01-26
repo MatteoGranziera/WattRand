@@ -20,5 +20,11 @@ namespace WattRand.BusinessLogic
             //WattRandDOCWriter wrd = new WattRandDOCWriter(results);
             //wrd.SaveToFile(filePath, "C:\\Users\\Tomoki\\Documents\\Visual Studio 2015\\Projects\\WattRand\\(Passo2)Registro-letture-contatori-Test.docx");
         }
+
+        public void Save()
+        {
+
+        }
+
     }
 }

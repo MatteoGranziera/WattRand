@@ -15,6 +15,7 @@ namespace WattRand.ViewModels
         private SumControlViewModel _activeSumControlViewModel;
         private ObservableCollection<ControlElementViewModel> _elements;
         private bool _isSumPopUpOpen;
+        private string _errorText;
 
         public MainViewModel()
         {
@@ -55,6 +56,17 @@ namespace WattRand.ViewModels
                 RaisePropertyChanged("IsSumPopUpOpen");
             }
         }
+
+        public string ErrorText
+        {
+            get { return _errorText; }
+            set
+            {
+                _errorText = value;
+                RaisePropertyChanged("ErrorText");
+            }
+        }
+
         public ICommand AddElementCommand { get; private set; }
         public ICommand SortElementsCommand { get; private set; }
         public ICommand ExecuteCommand { get; private set; }
@@ -76,14 +88,25 @@ namespace WattRand.ViewModels
             WattRandManager manager = new WattRandManager() { Elements = this.Elements.ToList().ConvertAll(v => v.GetElement()) };
 
             SaveFileDialog dialog = new SaveFileDialog();
-            dialog.Filter = "Foglio di calcolo Excel 2007-2010 (.xlsx) | *.xlsx | Foglio Word 2007-2010 (.docx) | *.docx";
+            dialog.Filter = "Foglio di calcolo Excel 2007-2010 (.xlsx)|*.xlsx|Foglio Word 2007-2010 (.docx)|*.docx";
             bool? result = dialog.ShowDialog();
 
             if (result.HasValue && result.Value)
             {
-                manager.Elaborate(dialog.FileName);
+                string filename = dialog.FileName.EndsWith(".xlsx") ? dialog.FileName : $"{dialog.FileName}.xlsx" ;
+                try
+                {
+                    manager.Elaborate(filename);
+                    ErrorText = $"Esportazione completata: {filename}";
+                }
+                catch (Exception e)
+                {
+                    ErrorText = e.Message;
+
+                }
             }
         }
+
 
         private ControlElementViewModel GetNewElement()
         {
